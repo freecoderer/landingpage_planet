@@ -1,54 +1,67 @@
 import { Navbar, Nav, Container, Button, Form, Col, Row } from 'react-bootstrap';
 import './App.css';
-import React from 'react'
+import React,{useState} from 'react';
 import { Wheel } from 'react-custom-roulette';
+import planet from './planet.png'
 
 const data = [
-  { option: '0', style: { backgroundColor: 'green', textColor: 'black' } },
-  { option: '1', style: { backgroundColor: 'white' } },
-  { option: '2' },
+  { option: '삼복', style: { backgroundColor: '#769ECB' , textColor: 'black' } },
+  { option: '신동', style: { backgroundColor: '#FAF3DD' , textColor: 'black' } },
+  { option: '학교가는길', style: {backgroundColor: '#C8D6B9', textColor: 'black'} },
 ]
 
 
 function App() {
+  const [mustSpin, setMustSpin] = useState(false);
+  const [prizeNumber, setPrizeNumber] = useState(0);
+
+  const handleSpinClick = () => {
+    const newPrizeNumber = Math.floor(Math.random() * data.length);
+    setPrizeNumber(newPrizeNumber);
+    setMustSpin(true);
+  };
+
   return (
     <div className='full'>
-      <Navbar bg="light" expand="lg">
-        <Container className='navclass'>
-          <Navbar.Brand href="#features">냠냠플래닛 로고</Navbar.Brand>
+      <Navbar  className='navclass' expand="lg">
+      <Container>
+          <Navbar.Brand href="#into"><img className ='img' src={planet} alt='asdf'></img>&nbsp;&nbsp;&nbsp;냠냠플래닛</Navbar.Brand>
         </Container>
       </Navbar>
+      <section id="intro">
         <Container className='firstclass'>
-          <Row>
-            <Col>
-              <h1>배고픈 점심시간... 뭐먹을지 모르겠다면?</h1>
-            </Col>
-            <Col>
-              <img src='assets/img/q.png' alt="logo"/> 
-            </Col>
-          </Row>
-          <Container className='blank'>
+            <Row>
+              <Col>
+                <h1>배고픈 점심시간... 뭐먹을지 모르겠다면?</h1>
+              </Col>
+              <Col>
+                <img src='assets/img/q.png' alt="logo"/> 
+              </Col>
+            </Row>
+            <Container className='blank'>
+            </Container>
+            <Row>
+              <Col>
+              </Col>
+              <Col className='ButtonClass'>
+                <Button className="btn float-end btnclass"><Nav.Link href="#contact">테스터 신청</Nav.Link></Button>
+              </Col>
+            </Row>
           </Container>
-          <Row>
-            <Col>
-            </Col>
-            <Col className='ButtonClass'>
-              <Button className="btn float-end btnclass"><Nav.Link href="#contact">테스터 신청</Nav.Link></Button>
-            </Col>
-          </Row>
-        </Container>
+      </section>
       <section id="into">
-        <Container>
+        <Container className='text-center'>
           <h2>냠냠플래닛 소개</h2>
           <p className='parah'>냠냠플래닛은 선택장애를 위한 점심시간 쿠폰 제공 서비스를 목표로 하여 만들어진 서비스 입니다</p>
-          <div>
+          <div className='wheeldiv'>
             <Wheel
-              prizeNumber={3}
+              mustStartSpinning={mustSpin}
+              prizeNumber={prizeNumber}
               data={data}
-              backgroundColors={['#3e3e3e', '#df3428']}
-              textColors={['#ffffff']}
-            />
+              onStopSpinning={() => {
+                setMustSpin(false);}}/>
           </div>
+          <Button size="lg" className="btn float-center submitclass" onClick={handleSpinClick} type="submit"> 돌리기!</Button>
         </Container>
       </section>
       <section id="main">
@@ -78,11 +91,19 @@ function App() {
           <Form>
             <Form.Group controlId="formBasicName">
               <Form.Label>이름</Form.Label>
-              <Form.Control type="text" placeholder="Enter your name" required />
+              <Form.Control type="text" placeholder="이름 입력" required />
+            </Form.Group>
+            <Form.Group controlId="formBasicEmail">
+              <Form.Label>학과</Form.Label>
+              <Form.Control type="text" placeholder="학과 입력" required />
+            </Form.Group>
+            <Form.Group controlId="formBasicEmail">
+              <Form.Label>학번</Form.Label>
+              <Form.Control type="number" placeholder="학번 입력" required />
             </Form.Group>
             <Form.Group controlId="formBasicEmail">
               <Form.Label>이메일</Form.Label>
-              <Form.Control type="email" placeholder="Enter your email" required />
+              <Form.Control type="email" placeholder="이메일 입력" required />
             </Form.Group>
               <Container className="text-center">
                 <Button size="lg" className="btn float-center submitclass" type="submit">

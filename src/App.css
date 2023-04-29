@@ -5,12 +5,22 @@
 }
 
 .navclass{
-    height: 100px;
+  background-color: #fffdfa;
+}
+
+#intro{
+  padding-top: 100px;
+  background-color: #e04552;
+  padding-bottom: 100px;
 }
 
 .firstclass{
     margin-top: 100px;
+}
 
+.img{
+  height: 100px;
+  width: 100px;
 }
 
 .parah{
@@ -22,7 +32,7 @@
 }
 
 .full {
-    background: linear-gradient(135deg, #87CEFA, #FFC0CB);
+    background-color: #fffdfa;
     font-family: 'Noto Sans KR', sans-serif;
   }
   
@@ -88,4 +98,11 @@
   #contact{
     text-align: center;
 
+  }
+
+  .wheeldiv{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+    padding-top: 100px;
   }
