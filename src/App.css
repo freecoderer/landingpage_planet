@@ -1,0 +1,91 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+
+.navclass{
+    height: 100px;
+}
+
+.firstclass{
+    margin-top: 100px;
+
+}
+
+.parah{
+    font-size: 13pt;
+}
+
+.blank{
+    height: 200px;
+}
+
+.full {
+    background: linear-gradient(135deg, #87CEFA, #FFC0CB);
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  
+  /* Add styles to the first section */
+  #into {
+    padding: 80px 0;
+  }
+  
+  /* Add styles to the h2 tags */
+  h2 {
+    font-size: 2.5rem;
+    margin: 60px 0 30px 0;
+  }
+  
+  /* Add styles to the p tags */
+  p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+  }
+  
+  /* Add styles to the section#plan */
+  #plan {
+    padding: 80px 0;
+
+  }
+  
+  /* Add styles to the form elements */
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  form label {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  form input[type='text'],
+  form input[type='email'] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .submitclass {
+    background-color: #f25c6e;
+    border: none;
+    font-size: 1.5rem;
+    padding: 10px 50px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .submitclass:hover {
+    background-color: #e04552;
+    cursor: pointer;
+  }
+  
+  #contact{
+    text-align: center;
+
+  }
