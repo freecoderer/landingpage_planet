@@ -1,7 +1,43 @@
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
-.notosanskr * { 
- font-family: 'Noto Sans KR', sans-serif;
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RixYeoljeongdo_Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/RixYeoljeongdo_Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.slide-navigation {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: 0px;
+}
+
+.slide-navigation button:disabled {
+  background-color: black;
+  border: 1px solid white;
+}
+.roulette{
+  max-width: 100%;
+  max-height: 100%;
+  font-family: 'RixYeoljeongdo_Regular';
+  font-size: 8vw;
+}
+
+.parah{
+  font-size: 1.3vw;
+}
+
+.formleft{
+  text-align:"left";
 }
 
 .navclass{
@@ -9,38 +45,47 @@
 }
 
 #intro{
-  padding-top: 100px;
-  background-color: #e04552;
-  padding-bottom: 100px;
+
+  width : 100%;
+  height : 100%;
+  display:flex;
+  justify-content : center;
+  align-items:center;
+
 }
 
-.firstclass{
-    margin-top: 100px;
+#into{
+  width : 100%;
+  height : 100%;
+  display:flex;
+  justify-content : center;
+  align-items:center;
 }
 
-.img{
-  height: 100px;
-  width: 100px;
+.imgs{
+  max-width: 100%;
+  max-height: auto;
 }
 
-.parah{
-    font-size: 13pt;
+#main{
+  width : 100%;
+  height : 100%;
+  display:flex;
+  justify-content : center;
+  align-items:center;
 }
+
 
 .blank{
-    height: 200px;
+ height: 100px;
 }
 
 .full {
     background-color: #fffdfa;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Pretendard-Regular';
   }
   
-  /* Add styles to the first section */
-  #into {
-    padding: 80px 0;
-  }
-  
+
   /* Add styles to the h2 tags */
   h2 {
     font-size: 2.5rem;
@@ -53,31 +98,22 @@
     line-height: 1.8;
   }
   
-  /* Add styles to the section#plan */
-  #plan {
-    padding: 80px 0;
-
-  }
-  
-  /* Add styles to the form elements */
   form {
-    max-width: 500px;
-    margin: 0 auto;
+ 
+    margin: auto;
   }
   
   form label {
     font-size: 1.5rem;
     margin-bottom: 10px;
     display: block;
+    float: left;
   }
   
   form input[type='text'],
   form input[type='email'] {
-    width: 100%;
-    padding: 10px;
     border-radius: 5px;
     border: none;
-    margin-bottom: 20px;
     font-size: 1.2rem;
   }
   
@@ -85,7 +121,6 @@
     background-color: #f25c6e;
     border: none;
     font-size: 1.5rem;
-    padding: 10px 50px;
     border-radius: 5px;
     transition: all 0.2s ease-in-out;
   }
@@ -96,13 +131,64 @@
   }
   
   #contact{
-    text-align: center;
+    width : 100%;
+    height : 100%;
+    display:flex;
+    justify-content : center;
+    align-items:center;
 
   }
 
   .wheeldiv{
     display: flex;
     justify-content: center;
-    padding-bottom: 100px;
-    padding-top: 100px;
+    max-width: 100%;
+    max-height: auto;
+  }
+
+  body {
+    margin : 0;
+  }
+  
+  
+  .section-common {
+    width : 100%;
+    height : 100%;
+    display:flex;
+    justify-content : center;
+    align-items:center;
+    font-size:36px;
+  }
+  
+  
+  .slide-navigation button:nth-child(1) {
+    display: none;
+  }
+  
+  .slide-navigation button:nth-last-child(1) {
+    display: none;
+  }
+  
+  .slide-navigation button {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 5px;
+    height: 15px;
+    margin: 0 5px;
+    font-size: 0px;
+    cursor: pointer;
+  }
+  
+  .slide-navigation {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 0px;
+  }
+  
+  .slide-navigation button:disabled {
+    background-color: black;
+    border: 1px solid white;
   }
