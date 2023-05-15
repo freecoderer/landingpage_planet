@@ -106,7 +106,7 @@ function App() {
         <Slide>
           <section id="contact">
             <Container>
-              <h5>정보를 남겨주시면 관련내용을 토대로 리스트에 올려드리겠습니다</h5>
+              <p className='normal'>정보를 남겨주시면 관련내용을 토대로 참가 리스트에 올려 드리겠습니다</p>
               <br></br>
               <h2>베타테스트 신청</h2>
                 <Form ref={form} onSubmit={sendEmail}>
