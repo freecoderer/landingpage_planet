@@ -29,11 +29,39 @@
   max-width: 100%;
   max-height: 100%;
   font-family: 'RixYeoljeongdo_Regular';
-  font-size: 8vw;
+  font-size: 5em;
+}
+
+.firstintro h2{
+  font-family: 'RixYeoljeongdo_Regular';
+  font-size: 2rem;
+  color: #fff;
+  text-align: center; 
+  position: relative;
+
+}
+
+.intro img{
+  width: 10em;
+  height: 14em;
+
+}
+.firstclass{
+  z-index: 50;
+  position: relative;
+  font-family: 'RixYeoljeongdo_Regular';
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.firstclass h1{
+  font-size: 4em;
 }
 
 .parah{
-  font-size: 1.3vw;
+  font-size: 2em;
 }
 
 .formleft{
@@ -44,35 +72,51 @@
   background-color: #fffdfa;
 }
 
-#intro{
+.intro{
 
   width : 100%;
   height : 100%;
   display:flex;
   justify-content : center;
   align-items:center;
+  background-image: url("/public/foodfood.jpg");
+  background-size: cover;
+  position: relative;
+
 
 }
+.intro::before{
+  content: "";
+  opacity: 0.5;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: #000;
+}
 
-#into{
+
+.firstintro{
   width : 100%;
   height : 100%;
   display:flex;
   justify-content : center;
   align-items:center;
+  background-image: url("/public/foodimg.jpg");
+  background-size: cover;
+  position: relative;
 }
 
-.imgs{
-  max-width: 100%;
-  max-height: auto;
-}
-
-#main{
-  width : 100%;
-  height : 100%;
-  display:flex;
-  justify-content : center;
-  align-items:center;
+.firstintro::before{
+  content: "";
+  opacity: 0.5;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: #000;
 }
 
 
@@ -86,15 +130,9 @@
   }
   
 
-  /* Add styles to the h2 tags */
-  h2 {
-    font-size: 2.5rem;
-    margin: 60px 0 30px 0;
-  }
-  
   /* Add styles to the p tags */
   p {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     line-height: 1.8;
   }
   
@@ -104,7 +142,7 @@
   }
   
   form label {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     margin-bottom: 10px;
     display: block;
     float: left;
@@ -118,17 +156,15 @@
   }
   
   .submitclass {
-    background-color: #f25c6e;
+    margin-top: 3vh;
     border: none;
     font-size: 1.5rem;
     border-radius: 5px;
     transition: all 0.2s ease-in-out;
+    margin-bottom: 3vh;
+
   }
   
-  .submitclass:hover {
-    background-color: #e04552;
-    cursor: pointer;
-  }
   
   #contact{
     width : 100%;
@@ -148,6 +184,18 @@
 
   body {
     margin : 0;
+  }
+  
+  .into{
+    width : 100%;
+    height : 100%;
+    display:flex;
+    justify-content : center;
+    align-items:center;
+  }
+  
+  .normal{
+    font-size: 1em;
   }
   
   

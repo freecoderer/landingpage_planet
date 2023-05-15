@@ -6,9 +6,10 @@ import emailjs from '@emailjs/browser';
 import { FullPage, Slide } from 'react-full-page';
 
 const data = [
-  { option: '삼복', style: { backgroundColor: '#769ECB' , textColor: 'black' } },
-  { option: '신동', style: { backgroundColor: '#FAF3DD' , textColor: 'black' } },
-  { option: '학교가는길', style: {backgroundColor: '#C8D6B9', textColor: 'black'} },
+  { option: '신동', style: { backgroundColor: '#769ECB' , textColor: 'black' } },
+  { option: '크라이치즈버거', style: { backgroundColor: '#FAF3DD' , textColor: 'black' } },
+  { option: '남경', style: {backgroundColor: '#C8D6B9', textColor: 'black'} },
+  { option: '모야그집', style: {backgroundColor: '#7CAA98', textColor: 'black'} }
 ]
 
 
@@ -35,7 +36,7 @@ function App() {
       )
       .then(
         (result) => {
-          alert('메일 전송 완료!');
+          alert('이메일을 성공적으로 보냈습니다!');
           console.log(result.text);
         },
         (error) => {
@@ -48,94 +49,93 @@ function App() {
     <div className='full'>
       <FullPage controls controlsProps={{ className: "slide-navigation" }}>
         <Slide>
-          <section id="intro">
+          <section className="intro">
             <Container className='firstclass'>
-              <Row>
-                <Col>
-                  <h1>배고픈 점심시간... 뭐먹을지 모르겠다면?</h1>
-                </Col>
-                <Col>
-                  <img className="imgs float-end" src='assets/img/q.png' alt="logo"/> 
-                </Col>
-              </Row>
-              <Container className='blank'>
-              </Container>
-              <Row>
-                <Col>
-                </Col>
-                <Col className='ButtonClass'>
-                  <Button className="btn float-end btnclass"><Nav.Link href="#contact">테스터 신청</Nav.Link></Button>
-                </Col>
-              </Row>
+                <div>
+                  <h1>Ready to YUM YUM!</h1>
+                </div>
+                <div className=''>
+                  <img src='/nyumnyum.png' alt='nyumnyumyi'></img>
+                </div>
+                <div>
+                  <p class="parah">대학생들의 외식 소비 부담을 게임 컨텐츠를 통해 해결하고자 합니다.</p>
+                </div>
             </Container>
           </section>
         </Slide>
         <Slide>
-          <section id="into">
+          <section className="firstintro">
+          <Container className='text-center'>
+            <Row>
+              <Col>
+                <div><h2>밥값이 부담되거나</h2></div> 
+                <div><h2>오늘 뭐먹을지 고민될 때</h2></div>
+              </Col>
+              <Col>
+              </Col>
+            </Row>
+            <Container className='blank'>
+            </Container>
+            <Row>
+              <Col>
+              </Col>
+              <Col>
+              </Col>
+            </Row>
+          </Container>
+          </section>
+        </Slide>
+        <Slide>
+          <section className="into">
             <Container className='text-center'>
-              <p className='parah'>냠냠플래닛은 기존 오프라인 외식 산업에 컨텐츠 적인 요소를 가미하여 유저에게는 새로운 경험을 제공함과 동시에, 지역 상권 내에 여러 음식점 업주들에게는 더 많은 손님을 견인하여 지역 상권 활성화에도 기여하고자하는 목표를 가지고 있는 서비스 입니다</p>
-              <div className='roulette'>냠냠 룰렛</div>
-              <div className='wheeldiv'>
-                <Wheel
-                  mustStartSpinning={mustSpin}
-                  prizeNumber={prizeNumber}
-                  data={data}
-                  onStopSpinning={() => {
-                    setMustSpin(false);}}/>
-              </div>
-              <Button size="lg" className="btn float-center submitclass" onClick={handleSpinClick} type="submit"> 돌리기!</Button>
+                <p className='parah'>500미터 이내의 음식점을 냠냠 룰렛으로 정해보세요<br></br>오늘 안에 방문하면 <strong>최대 20% 할인!</strong></p>
+                <div className='roulette'>냠냠 룰렛</div>
+                <div className='wheeldiv'>
+                  <Wheel
+                    mustStartSpinning={mustSpin}
+                    prizeNumber={prizeNumber}
+                    data={data}
+                    onStopSpinning={() => {
+                      setMustSpin(false);}}/>
+                </div>
+                <Button size="lg" className="btn float-center submitclass" onClick={handleSpinClick} type="submit"> 돌리기!</Button>
+
             </Container>
           </section>
-        </Slide>
-        <Slide>
-          <section id="main">
-            <Container>
-              <h2>냠냠플래닛 사용자 불편사항 이걸로 만들게된 계기</h2>
-              <p className='parah'>이러이러한 목표를 가지고 있습니다</p>
-              <h2>냠냠플래닛 계획</h2>
-              <p>국제관 앞에서 언제 어디서 ~~한 룰렛을 돌릴 예정입니다</p>
-              <h2>냠냠플래닛 베니핏</h2>
-              <p>이러이러한 베니핏이 있을 예정입니다</p>
-            </Container>
-          </section>       
         </Slide>
         <Slide>
           <section id="contact">
             <Container>
-              <h2>베타테스터 신청</h2>
+              <h5>정보를 남겨주시면 관련내용을 토대로 리스트에 올려드리겠습니다</h5>
+              <br></br>
+              <h2>베타테스트 신청</h2>
                 <Form ref={form} onSubmit={sendEmail}>
                   <Form.Group controlId="formBasicName">
                     <Form.Label className="formleft" >이름</Form.Label>
-                    <Form.Control type="text" name="name" placeholder="이름 입력" required />
+                    <Form.Control type="text" name="name" placeholder="이름을 입력하세요" required />
                   </Form.Group>
                   <Form.Group controlId="formBasicEmail">
                     <Form.Label>학과</Form.Label>
-                    <Form.Control type="text" name = "department" placeholder="학과 입력" required />
+                    <Form.Control type="text" name = "department" placeholder="학과를 입력하세요" required />
                   </Form.Group>
                   <Form.Group controlId="formBasicEmail">
                     <Form.Label>학번</Form.Label>
-                    <Form.Control type="text" name = "studentno" placeholder="학번 입력" required />
+                    <Form.Control type="text" name = "studentno" placeholder="학번을 입력하세요" required />
                   </Form.Group>
                   <Form.Group controlId="formBasicEmail">
                     <Form.Label>이메일</Form.Label>
-                    <Form.Control type="email" name = "email" placeholder="이메일 입력" required />
+                    <Form.Control type="email" name = "email" placeholder="이메일을 입력하세요" required />
                   </Form.Group>
                   <Container className="text-center">
                     <Button size="lg" className="btn float-center submitclass" type="submit">
-                      신청하기
+                      전송하기
                     </Button>
+                    <p className='normal'>&copy;2023 ReadyBerry</p>
+                    <p className='normal'>대표: 오남택 010-9295-5340 nyamnyam.planet@gmail.com</p>
                   </Container>
                 </Form>
             </Container>
           </section>
-          <footer>
-            <Container>
-              <p>FAQ는 이곳으로 하면 됩니다~</p>
-            </Container>
-            <Container>
-              <p>&copy;2023 ReadyBerry</p>
-            </Container>
-          </footer> 
             </Slide>
           </FullPage>
     </div>  
