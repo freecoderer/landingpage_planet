@@ -29,7 +29,7 @@
   max-width: 100%;
   max-height: 100%;
   font-family: 'RixYeoljeongdo_Regular';
-  font-size: 5em;
+  font-size: 3em;
 }
 
 .firstintro h2{
@@ -57,11 +57,11 @@
 }
 
 .firstclass h1{
-  font-size: 4em;
+  font-size: 3em;
 }
 
 .parah{
-  font-size: 2em;
+  font-size: 1em;
 }
 
 .formleft{
@@ -120,9 +120,7 @@
 }
 
 
-.blank{
- height: 100px;
-}
+
 
 .full {
     background-color: #fffdfa;
@@ -130,19 +128,13 @@
   }
   
 
-  /* Add styles to the p tags */
-  p {
-    font-size: 1.5em;
-    line-height: 1.8;
-  }
-  
   form {
  
     margin: auto;
   }
   
   form label {
-    font-size: 1.5em;
+    font-size: 1em;
     margin-bottom: 10px;
     display: block;
     float: left;
@@ -152,16 +144,16 @@
   form input[type='email'] {
     border-radius: 5px;
     border: none;
-    font-size: 1.2rem;
+    font-size: 1em;
   }
   
   .submitclass {
-    margin-top: 3vh;
+    margin-top: 1vh;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1em;
     border-radius: 5px;
     transition: all 0.2s ease-in-out;
-    margin-bottom: 3vh;
+    margin-bottom: 1vh;
 
   }
   
