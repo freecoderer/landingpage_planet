@@ -69,7 +69,7 @@ function App() {
             <Row>
               <Col>
                 <div><h2>밥값이 부담되거나</h2></div> 
-                <div><h2>오늘 뭐먹을지 고민될 때</h2></div>
+                <div><h2>오늘 뭐먹지 고민될 때!</h2></div>
               </Col>
               <Col>
               </Col>
@@ -106,7 +106,7 @@ function App() {
         <Slide>
           <section id="contact">
             <Container>
-              <p className='normal'>정보를 남겨주시면 관련내용을 토대로 참가 리스트에 올려 드리겠습니다</p>
+              <p className='normal'>&#40;5월 말 예정&#41; 선착순 30명에게 베타 테스트 오픈 시, 참가 링크를 가장 먼저 보내드려요!</p>
               <br></br>
               <h2>베타테스트 신청</h2>
                 <Form ref={form} onSubmit={sendEmail}>
