@@ -106,7 +106,7 @@ function App() {
         <Slide>
           <section id="contact">
             <Container>
-              <p className='normal'>&#40;5월 말 예정&#41; 선착순 30명에게 베타 테스트 오픈 시, 참가 링크를 가장 먼저 보내드려요!</p>
+              <p className='normal'>&#40;5월 말 예정&#41; 베타 서비스 오픈 소식을 이메일로 가장 먼저 보내드립니다!</p>
               <br></br>
               <h2>베타테스트 신청</h2>
                 <Form ref={form} onSubmit={sendEmail}>
