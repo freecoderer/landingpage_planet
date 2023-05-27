@@ -1,16 +1,16 @@
 import { Nav, Container, Button, Form, Alert, Col, Row } from 'react-bootstrap';
 import './App.css';
-import React,{useState, useRef} from 'react';
+import React,{useState, useEffect,useRef} from 'react';
 import { Wheel } from 'react-custom-roulette';
 import emailjs from '@emailjs/browser';
 import { FullPage, Slide } from 'react-full-page';
 
 const data = [
-  { option: '홍천식당', count:20, style: { backgroundColor: '#769ECB' , textColor: 'black' } },
-  { option: '더53', count:20, style: { backgroundColor: '#FAF3DD' , textColor: 'black' } },
-  { option: '남경', count:20, style: {backgroundColor: '#C8D6B9', textColor: 'black'} },
-  { option: '모야그집', count:20, style: {backgroundColor: '#7CAA98', textColor: 'black'} },
-  { option: '새우식탁', count:20, style: {backgroundColor: '#8FC1A9', textColor: 'black'} }
+  { option: '홍천식당', name: '홍천식당', count:20, style: { backgroundColor: '#769ECB' , textColor: 'black' } },
+  { option: '더53', name: '더 53', count:20, style: { backgroundColor: '#FAF3DD' , textColor: 'black' } },
+  { option: '남경', name: '남경', count:20, style: {backgroundColor: '#C8D6B9', textColor: 'black'} },
+  { option: '모야그집', name: '모야그집', count:20, style: {backgroundColor: '#7CAA98', textColor: 'black'} },
+  { option: '새우식탁', name: '새우식탁', count:20, style: {backgroundColor: '#8FC1A9', textColor: 'black'} }
 ]
 
 
@@ -40,6 +40,14 @@ function App() {
   };
 
   const allCountsExhausted = takenCounts.every((count, index) => count >= data[index].count);
+
+  useEffect(() => {
+    console.log('Count Status:');
+    takenCounts.forEach((count, index) => {
+      console.log(`${data[index].name}: ${data[index].count - count} remaining`);
+    });
+  }, [takenCounts]);
+
 
   const form = useRef();
 
@@ -118,6 +126,7 @@ function App() {
                 </div>
                 <Button size="lg" className="btn float-center submitclass" onClick={handleSpinClick} type="submit"> 돌리기!</Button>
                 {allCountsExhausted && <p>재료가 전부 소진되었습니다!</p>}
+
             </Container>
           </section>
         </Slide>
