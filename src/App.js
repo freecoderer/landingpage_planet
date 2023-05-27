@@ -44,7 +44,7 @@ function App() {
   useEffect(() => {
     console.log('Count Status:');
     takenCounts.forEach((count, index) => {
-      console.log(`${data[index].name}: ${data[index].count - count} remaining`);
+      console.log(`${data[index].name}: ${data[index].count - count} 개 남음`);
     });
   }, [takenCounts]);
 
