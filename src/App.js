@@ -6,22 +6,40 @@ import emailjs from '@emailjs/browser';
 import { FullPage, Slide } from 'react-full-page';
 
 const data = [
-  { option: '신동', style: { backgroundColor: '#769ECB' , textColor: 'black' } },
-  { option: '크라이치즈버거', style: { backgroundColor: '#FAF3DD' , textColor: 'black' } },
-  { option: '남경', style: {backgroundColor: '#C8D6B9', textColor: 'black'} },
-  { option: '모야그집', style: {backgroundColor: '#7CAA98', textColor: 'black'} }
+  { option: '홍천식당', count:20, style: { backgroundColor: '#769ECB' , textColor: 'black' } },
+  { option: '더53', count:20, style: { backgroundColor: '#FAF3DD' , textColor: 'black' } },
+  { option: '남경', count:20, style: {backgroundColor: '#C8D6B9', textColor: 'black'} },
+  { option: '모야그집', count:20, style: {backgroundColor: '#7CAA98', textColor: 'black'} },
+  { option: '새우식탁', count:20, style: {backgroundColor: '#8FC1A9', textColor: 'black'} }
 ]
 
 
 function App() {
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState(0);
+  const [takenCounts, setTakenCounts] = useState(Array(data.length).fill(0));
 
   const handleSpinClick = () => {
-    const newPrizeNumber = Math.floor(Math.random() * data.length);
-    setPrizeNumber(newPrizeNumber);
-    setMustSpin(true);
+    if (!mustSpin) {
+      const availablePrizes = data.filter(
+        (prize, index) => takenCounts[index] < prize.count
+      );
+      
+      if (availablePrizes.length > 0) {
+        const randomIndex = Math.floor(Math.random() * availablePrizes.length);
+        const newPrizeNumber = data.indexOf(availablePrizes[randomIndex]);
+        
+        const newTakenCounts = [...takenCounts];
+        newTakenCounts[newPrizeNumber] += 1;
+        
+        setPrizeNumber(newPrizeNumber);
+        setTakenCounts(newTakenCounts);
+        setMustSpin(true);
+      }
+    }
   };
+
+  const allCountsExhausted = takenCounts.every((count, index) => count >= data[index].count);
 
   const form = useRef();
 
@@ -99,7 +117,7 @@ function App() {
                       setMustSpin(false);}}/>
                 </div>
                 <Button size="lg" className="btn float-center submitclass" onClick={handleSpinClick} type="submit"> 돌리기!</Button>
-
+                {allCountsExhausted && <p>재료가 전부 소진되었습니다!</p>}
             </Container>
           </section>
         </Slide>
