@@ -114,7 +114,7 @@ function App() {
         <Slide>
           <section className="into">
             <Container className='text-center'>
-                <p className='parah'>500미터 이내의 음식점을 냠냠 룰렛으로 정해보세요<br></br>오늘 안에 방문하면 <strong>최대 20% 할인!</strong></p>
+                <p className='parah'>500미터 이내의 음식점을 냠냠 룰렛으로 정해보세요<br></br>오늘 안에 방문하면 <strong>1200원 할인!</strong></p>
                 <div className='roulette'>냠냠 룰렛</div>
                 <div className='wheeldiv'>
                   <Wheel
