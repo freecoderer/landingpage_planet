@@ -9,7 +9,7 @@ const data = [
   { option: '홍천식당', name: '홍천식당', count:20, style: { backgroundColor: '#769ECB' , textColor: 'black' } },
   { option: '더53', name: '더 53', count:20, style: { backgroundColor: '#FAF3DD' , textColor: 'black' } },
   { option: '남경', name: '남경', count:20, style: {backgroundColor: '#C8D6B9', textColor: 'black'} },
-  { option: '모야그집', name: '모야그집', count:20, style: {backgroundColor: '#7CAA98', textColor: 'black'} },
+  { option: '꼬밥', name: '꼬밥', count:20, style: {backgroundColor: '#7CAA98', textColor: 'black'} },
   { option: '새우식탁', name: '새우식탁', count:20, style: {backgroundColor: '#8FC1A9', textColor: 'black'} }
 ]
 
