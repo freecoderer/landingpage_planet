@@ -1,6 +1,6 @@
 # Landing Page Planet 🌍
 
-![header](https://capsule-render.vercel.app/api?type=waving&color=6B5B95&text=Landing%20Page%20Planet&height=100&fontSize=40&fontColor=ffffff)
+![header](https://capsule-render.vercel.app/api?type=waving&color=88B04B&text=Landing%20Page%20Planet&height=100&fontSize=40&fontColor=ffffff)
 
 ## 🌟 Overview
 Welcome to the Landing Page Planet project! This repository contains the code and resources for creating a visually appealing and functional landing page using modern web technologies.
@@ -37,4 +37,4 @@ Feel free to reach out for any queries or collaboration opportunities:
 - **GitHub**: [freecoderer](https://github.com/freecoderer)
 - **LinkedIn**: [Donghyun Kim](https://www.linkedin.com/in/kdh1999dev)
 
-![footer](https://capsule-render.vercel.app/api?section=footer&type=waving&color=6B5B95)
+![footer](https://capsule-render.vercel.app/api?section=footer&type=waving&color=88B04B)
