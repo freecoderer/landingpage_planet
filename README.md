@@ -6,6 +6,8 @@
 Welcome to the Landing Page Planet project! This repository contains the code and resources for creating a visually appealing and functional landing page using modern web technologies.
 This project was used as a entrepreneurship project in Catholic University of Korea
 
+Check out the actual website here: [Landing Page Planet](https://nyumnyumplanet.netlify.app)
+
 ## 🚀 Features
 - **Responsive Design**: Ensures the landing page looks great on all devices, from desktops to mobile phones.
 - **Interactive Elements**: Utilizes JavaScript for dynamic content and user interactions.
